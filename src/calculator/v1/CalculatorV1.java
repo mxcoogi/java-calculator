@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class Calculator {
+public class CalculatorV1 {
     public static void main(String[] args) {
         System.out.println("=====절차적 계산기=====");
         System.out.println("프로그램 종료하고 싶으면 exit을 입력해주세요");
@@ -27,6 +27,7 @@ public class Calculator {
                     break;
                 } catch (Exception e) {
                     System.out.println("0 이상의 정수만 입력 해주세요");
+                    System.out.println(e);
                 }
             }
             while(true){
