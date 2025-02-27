@@ -87,6 +87,7 @@ public class CalculatorV2 implements Calculator{
         return operation;
     }
 
+    @Override
     public List<Integer> getRes() {
         return res;
     }
