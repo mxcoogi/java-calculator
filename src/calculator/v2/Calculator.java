@@ -2,10 +2,10 @@ package calculator.v2;
 
 import java.util.List;
 
-public interface Calculator {
+public interface Calculator<T> {
 
 
     int valueReturn();
-    public List<Integer> getRes();
+    public List<T> getRes();
 
 }

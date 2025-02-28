@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println("=====절차적프로그래밍=====");
+        System.out.println("=====객체지향 프로그래밍=====");
         Scanner sc = new Scanner(System.in);
         Set<Character> operators = Set.of('+', '-', '*', '/');
         int num1;
@@ -15,7 +15,7 @@ public class App {
         String temp;
         //계산시작
         while (true) {
-
+            break;
             //첫 수 입력
 
             //두 수 입력
