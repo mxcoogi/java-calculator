@@ -6,6 +6,6 @@ public interface Calculator<T> {
 
 
     int valueReturn();
-    public List<T> getRes();
+    List<T> getRes();
 
 }

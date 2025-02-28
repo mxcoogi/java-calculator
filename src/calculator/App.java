@@ -3,7 +3,6 @@ package calculator;
 import calculator.v2.CalculatorV2;
 import calculator.v2.Input;
 import calculator.v1.CalculatorV1;
-import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
