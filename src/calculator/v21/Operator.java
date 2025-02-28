@@ -3,7 +3,7 @@ package calculator.v21;
 
 import java.lang.Long;
 
-public class Operater {
+public class Operator {
 
 
     public Long add(long num1, long num2) {
@@ -35,7 +35,7 @@ public class Operater {
         return r;
     }
 
-    public long div(long num1, long num2) {
+    public Long div(long num1, long num2) {
         // 0으로 나누는 경우 예외 처리
         if (num2 == 0) {
             throw new ArithmeticException("Division by zero");
