@@ -11,19 +11,25 @@ public class CalculatorV21 implements Calculator{
     private char c;
 
     @Override
-    public Long getValues() {
-        return null;
+    public void getValues() {
+        Long res = resList.get(resList.size()-1);
+        if(res!=null){
+            System.out.println(res);
+        }
     }
 
     @Override
-    public List<Long> getList() {
-        return this.resList;
+    public void getList() {
+        System.out.println("oldValue<======>latestValue");
+        System.out.println(resList);
     }
 
-    public Long operate(){
+    public void operate(){
         Long res = operator.operate(this.num1, this.num2, this.c);
         resList.add(res);
-        return res;
+        if(resList.size() > 3){
+            resList.remove(0);
+        }
     }
 
     public void setNum2(long num2) {
