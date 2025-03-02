@@ -6,6 +6,7 @@ import java.lang.Long;
 public class Operator {
 
 
+
     public Long add(long num1, long num2) {
         long res = num1 + num2;
         if (((num1 ^ res) & (num2 ^ res)) < 0) {
