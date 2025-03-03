@@ -1,4 +1,6 @@
 package calculator.v21;
+import calculator.v21.operation.Operator;
+
 import java.util.LinkedList;
 import java.util.List;
 
