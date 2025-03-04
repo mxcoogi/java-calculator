@@ -15,7 +15,7 @@ public enum OperationType {
         this.operateFunction = op;
     }
 
-    public <S extends Number> double operate(S a, S b){
+    public <S extends Number> Double operate(S a, S b){
         return operateFunction.operate(a.doubleValue(), b.doubleValue());
     }
 

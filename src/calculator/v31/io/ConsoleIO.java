@@ -24,9 +24,9 @@ public class ConsoleIO{
             checkExit(temp);
             try{
                 if(temp.contains(".")){
-                    return new Box(Double.parseDouble(temp));
+                    return new Box<>(Double.parseDouble(temp));
                 }else{
-                    return new Box(Long.parseLong(temp));
+                    return new Box<>(Long.parseLong(temp));
                 }
             }catch (NumberFormatException e){
                 System.out.println("올바른 정수를 입력해주세요");
