@@ -22,11 +22,10 @@ public class ConsoleIO {
                 if(temp.contains(".")){
                     return Double.parseDouble(temp);
                 }else{
-                    return Integer.parseInt(temp);
+                    return Long.parseLong(temp);
                 }
-            }catch (Exception e){
-                System.out.println(e);
-                System.out.println("다시 입력해 주세요");
+            }catch (NumberFormatException e){
+                System.out.println("올바른 정수를 입력해주세요");
             }
         }
     }
