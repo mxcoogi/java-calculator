@@ -58,7 +58,7 @@ public class ArithmeticCalculator implements Calculator {
 
         Number num1 = nums.get(nums.size() - 1);
         Number num2 = nums.get(nums.size() - 2);
-        System.out.print("입력값보다 큰 값들 : ");
+        System.out.print("입력값보다 큰 결과값들 : ");
         reslist.stream()
                 .filter(res -> res.doubleValue() > num1.doubleValue() && res.doubleValue() > num2.doubleValue())
                 .forEach(res -> System.out.print(res + " "));
