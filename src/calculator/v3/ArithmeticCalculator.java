@@ -43,13 +43,13 @@ public class ArithmeticCalculator implements Calculator {
     @Override
     public void getValues() {
         if(!reslist.isEmpty()){
-            System.out.println(reslist.get(reslist.size() - 1));
+            System.out.println("결과 : " + reslist.get(reslist.size() - 1));
         }
-
     }
 
     @Override
     public void getList() {
+        System.out.print("결과값 리스트 : ");
         reslist.stream().forEach(s -> System.out.print(s + " "));
         System.out.println();
     }
@@ -58,6 +58,7 @@ public class ArithmeticCalculator implements Calculator {
 
         Number num1 = nums.get(nums.size() - 1);
         Number num2 = nums.get(nums.size() - 2);
+        System.out.print("입력값보다 큰 값들 : ");
         reslist.stream()
                 .filter(res -> res.doubleValue() > num1.doubleValue() && res.doubleValue() > num2.doubleValue())
                 .forEach(res -> System.out.print(res + " "));
