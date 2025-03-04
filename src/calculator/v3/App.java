@@ -7,11 +7,13 @@ public class App {
         ArithmeticCalculator arithmeticCalculator = new ArithmeticCalculator();
 
         while(true){
+
             arithmeticCalculator.inputNum();
             arithmeticCalculator.inputNum();
             arithmeticCalculator.inputOP();
             arithmeticCalculator.calculate();
             arithmeticCalculator.getRes();
+
         }
 
     }

@@ -12,6 +12,7 @@ public class ArithmeticCalculator{
     private OperatorType operator;
     private List<Number> Nums;
     private ConsoleIO consoleIO;
+    private static int cnt = 0;
 
     public ArithmeticCalculator(){
         reslist = new LinkedList<>();
@@ -28,18 +29,19 @@ public class ArithmeticCalculator{
     }
 
     public void calculate(){
-        Number res = operator.operate(Nums.get(0), Nums.get(1));
+        Number res = operator.operate(Nums.get(cnt), Nums.get(cnt+1));
+        cnt+=2;
         reslist.add(res);
+        if(reslist.size() > 3){
+            reslist.remove(0);
+
+        }
     }
 
     public void getRes(){
-        System.out.println(Nums + " " + operator);
+        System.out.println(Nums.get(cnt-2) + " " +Nums.get(cnt-1)+ " " +operator);
         System.out.println(reslist);
     }
-
-
-
-
 
 
 }
