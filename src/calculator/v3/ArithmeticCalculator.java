@@ -1,7 +1,9 @@
 package calculator.v3;
+
 import calculator.v2.Calculator;
 import calculator.v3.io.ConsoleIO;
 import calculator.v3.operation.OperatorType;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -13,26 +15,26 @@ public class ArithmeticCalculator implements Calculator {
     private ConsoleIO consoleIO;
     private static int cnt = 0;
 
-    public ArithmeticCalculator(){
+    public ArithmeticCalculator() {
         reslist = new LinkedList<>();
         nums = new ArrayList<>();
         consoleIO = new ConsoleIO();
     }
 
-    public void inputNum(){
+    public void inputNum() {
         nums.add(consoleIO.inputNum());
     }
 
-    public void inputOP(){
+    public void inputOP() {
         operator = consoleIO.inputOp();
     }
 
     @Override
-    public void calculate(){
-        Number res = operator.operate(nums.get(cnt), nums.get(cnt+1));
-        cnt+=2;
+    public void calculate() {
+        Number res = operator.operate(nums.get(cnt), nums.get(cnt + 1));
+        cnt += 2;
         reslist.add(res);
-        if(reslist.size() > 3){
+        if (reslist.size() > 3) {
             reslist.remove(0);
 
         }
@@ -40,16 +42,19 @@ public class ArithmeticCalculator implements Calculator {
 
     @Override
     public void getValues() {
-        System.out.println(reslist.get(reslist.size()-1));
+        if(!reslist.isEmpty()){
+            System.out.println(reslist.get(reslist.size() - 1));
+        }
+
     }
 
     @Override
-    public void getList(){
-        reslist.stream().forEach(s -> System.out.print(s+" "));
+    public void getList() {
+        reslist.stream().forEach(s -> System.out.print(s + " "));
         System.out.println();
     }
 
-    public void overResList(){
+    public void overResList() {
 
         Number num1 = nums.get(nums.size() - 1);
         Number num2 = nums.get(nums.size() - 2);
@@ -58,7 +63,6 @@ public class ArithmeticCalculator implements Calculator {
                 .forEach(res -> System.out.print(res + " "));
         System.out.println();
     }
-
 
 
 }
