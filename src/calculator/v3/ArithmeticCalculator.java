@@ -1,8 +1,6 @@
 package calculator.v3;
-
 import calculator.v3.io.ConsoleIO;
 import calculator.v3.operation.OperatorType;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
