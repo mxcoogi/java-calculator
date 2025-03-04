@@ -1,5 +1,5 @@
 package calculator.v3.io;
-
+import calculator.v3.operation.OperatorType;
 import java.util.Scanner;
 
 public class ConsoleIO {
@@ -13,7 +13,7 @@ public class ConsoleIO {
     }
 
     //기능
-    public <T extends Number> Number inputNum(){
+    public Number inputNum(){
         String temp = sc.nextLine();
         try{
             if(temp.contains(".")){
@@ -25,5 +25,16 @@ public class ConsoleIO {
             System.out.println(e);
         }
         return null;
+    }
+
+    public OperatorType inputOp(){
+        String temp = sc.nextLine();
+        return switch (temp) {
+            case "+" -> OperatorType.ADD;
+            case "-" -> OperatorType.SUB;
+            case "*" -> OperatorType.MUL;
+            case "/" -> OperatorType.DIV;
+            default -> null;
+        };
     }
 }
