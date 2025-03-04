@@ -1,5 +1,7 @@
 package calculator.v2;
 
+import calculator.v2.io.InputParser;
+
 import java.util.Scanner;
 
 public class App {

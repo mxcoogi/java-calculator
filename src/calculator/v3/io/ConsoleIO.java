@@ -2,7 +2,7 @@ package calculator.v3.io;
 import calculator.v3.operation.OperatorType;
 import java.util.Scanner;
 
-public class ConsoleIO {
+public class ConsoleIO{
 
     //속성
     private Scanner sc;
