@@ -13,7 +13,7 @@ public class CalculatorV21 implements Calculator{
     private char c;
 
     @Override
-    public void getValues() {
+    public void getRes() {
         Long res = resList.get(resList.size()-1);
         if(res!=null){
             System.out.println(res);

@@ -1,7 +1,7 @@
 package calculator.v2;
 
 public interface Calculator {
-    void getValues();
+    void getRes();
     void getList();
     void calculate();
 

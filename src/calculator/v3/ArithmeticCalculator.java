@@ -41,7 +41,7 @@ public class ArithmeticCalculator implements Calculator {
     }
 
     @Override
-    public void getValues() {
+    public void getRes() {
         if(!reslist.isEmpty()){
             System.out.println("결과 : " + reslist.get(reslist.size() - 1));
         }

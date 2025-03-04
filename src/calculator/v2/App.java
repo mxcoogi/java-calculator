@@ -23,7 +23,7 @@ public class App {
             //연산부분
             cal.calculate();
             //결과 출력 및 반복유무
-            cal.getValues();
+            cal.getRes();
             cal.getList();
 
         }
