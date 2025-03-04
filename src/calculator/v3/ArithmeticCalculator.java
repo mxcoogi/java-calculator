@@ -50,5 +50,17 @@ public class ArithmeticCalculator implements Calculator {
         System.out.println();
     }
 
+    public void overResList(){
+
+        Number num1 = nums.get(nums.size() - 1);
+        Number num2 = nums.get(nums.size() - 2);
+        // nums의 마지막 두 요소보다 큰 reslist의 요소들 출력하기
+        reslist.stream()
+                .filter(res -> res.doubleValue() > num1.doubleValue() && res.doubleValue() > num2.doubleValue())  // 필터링 조건: res가 num1, num2보다 커야 함
+                .forEach(res -> System.out.print(res + " "));  // 필터링된 요소 출력
+        System.out.println();
+    }
+
+
 
 }

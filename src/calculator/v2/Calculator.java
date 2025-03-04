@@ -4,4 +4,5 @@ public interface Calculator {
     void getValues();
     void getList();
     void calculate();
+
 }

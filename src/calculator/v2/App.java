@@ -19,7 +19,7 @@ public class App {
             //연산자 입력
             cal.setC(parser.inputChar());
             //연산부분
-            cal.operate();
+            cal.calculate();
             //결과 출력 및 반복유무
             cal.getValues();
             cal.getList();
