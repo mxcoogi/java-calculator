@@ -15,6 +15,7 @@ public class ConsoleIO {
     //기능
     public Number inputNum(){
         String temp = sc.nextLine();
+        checkExit(temp);
         try{
             if(temp.contains(".")){
                 return Double.parseDouble(temp);
@@ -29,6 +30,7 @@ public class ConsoleIO {
 
     public OperatorType inputOp(){
         String temp = sc.nextLine();
+        checkExit(temp);
         return switch (temp) {
             case "+" -> OperatorType.ADD;
             case "-" -> OperatorType.SUB;
@@ -36,5 +38,9 @@ public class ConsoleIO {
             case "/" -> OperatorType.DIV;
             default -> null;
         };
+    }
+
+    public void checkExit(String s){
+        if(s.equals("exit")) System.exit(-1);
     }
 }
