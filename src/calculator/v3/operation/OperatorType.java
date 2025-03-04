@@ -16,7 +16,8 @@ public enum OperatorType {
         this.operation = operation;
     }
 
-    public Number operate(Number a, Number b){
+
+    public <S extends Number> Number operate(S a, S b){
         Double res = operation.apply(a.doubleValue(), b.doubleValue());
         if(res == res.longValue()){
             return res.longValue();

@@ -32,7 +32,6 @@ public class ArithmeticCalculator implements Calculator {
         Number res = operator.operate(nums.get(cnt), nums.get(cnt+1));
         cnt+=2;
         reslist.add(res);
-        System.out.println(res);
         if(reslist.size() > 3){
             reslist.remove(0);
 
@@ -41,7 +40,7 @@ public class ArithmeticCalculator implements Calculator {
 
     @Override
     public void getValues() {
-
+        System.out.println(reslist.get(reslist.size()-1));
     }
 
     @Override

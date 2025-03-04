@@ -12,6 +12,7 @@ public class App {
             arithmeticCalculator.inputNum();
             arithmeticCalculator.inputOP();
             arithmeticCalculator.calculate();
+            arithmeticCalculator.getValues();
             arithmeticCalculator.getList();
             arithmeticCalculator.overResList();
 
