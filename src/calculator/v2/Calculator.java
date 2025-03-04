@@ -1,11 +1,7 @@
 package calculator.v2;
 
-import java.util.List;
-
-public interface Calculator<T> {
-
-
-    int valueReturn();
-    List<T> getRes();
-
+public interface Calculator {
+    void getValues();
+    void getList();
+    void calculate();
 }

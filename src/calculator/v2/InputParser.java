@@ -1,4 +1,4 @@
-package calculator.v21;
+package calculator.v2;
 
 import java.util.Scanner;
 import java.util.Set;

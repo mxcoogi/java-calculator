@@ -1,5 +1,5 @@
-package calculator.v21;
-import calculator.v21.operation.Operator;
+package calculator.v2;
+import calculator.v2.operation.Operator;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -26,7 +26,8 @@ public class CalculatorV21 implements Calculator{
         System.out.println(resList);
     }
 
-    public void operate(){
+    @Override
+    public void calculate(){
         Long res = operator.operate(this.num1, this.num2, this.c);
         resList.add(res);
         if(resList.size() > 3){
