@@ -4,20 +4,17 @@ import calculator.v2.Calculator;
 import calculator.v3.operation.OperatorType;
 import calculator.v31.io.ConsoleIO;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class ArithmeticCalculator implements Calculator {
-    private Queue<Box> resList;
+    private List<Box> resList;
     private ConsoleIO consoleIO;
     private OperatorType operatorType;
     private List<Box> numList;
 
 
     ArithmeticCalculator(){
-        resList = new LinkedList<>();
+        resList = new ArrayList<>();
         numList = new ArrayList<>();
         consoleIO = new ConsoleIO();
 
@@ -26,7 +23,7 @@ public class ArithmeticCalculator implements Calculator {
     @Override
     public void getRes() {
         System.out.print("결과값 : ");
-        System.out.println(resList.peek().getValue());
+        System.out.println(resList.get(resList.size()-1).getValue());
     }
 
     @Override
@@ -42,7 +39,7 @@ public class ArithmeticCalculator implements Calculator {
         numList.clear(); //리스트 초기화
         resList.add(res);
         if(resList.size() > 3){
-            resList.poll();
+            resList.remove(0);
         }
     }
 
