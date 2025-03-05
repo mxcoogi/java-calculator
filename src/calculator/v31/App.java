@@ -13,5 +13,7 @@ public class App {
             calculator.getRes();
             calculator.getList();
         }
+
+
     }
 }

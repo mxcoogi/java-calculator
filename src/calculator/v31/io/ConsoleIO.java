@@ -14,7 +14,10 @@ public class ConsoleIO{
     }
 
     public void checkExit(String s){
-        if(s.equals("exit")) System.exit(-1);
+        if(s.equals("exit")) {
+            sc.close();
+            System.exit(-1);
+        }
     }
 
     public Box inputNum(){
